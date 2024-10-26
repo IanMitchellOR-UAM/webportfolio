@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #111;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+}
+
+.social-links {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.social-links a {
+    margin-right: 15px;
+}
+
+.social-links img {
+    width: 24px;
+    filter: invert(100%);
+}
+
+.profile-section {
+    position: relative;
+    z-index: 2;
+}
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: #aaa;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #aaa;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.nav-links a.active {
+    color: #fff;
+    font-weight: bold;
+    border-bottom: 2px solid #fff;
+}
+
+.contact {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.contact a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.contact a:hover {
+    color: #fff;
+}
+
+/* Efecto de círculos concéntricos */
+.container::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 1px solid #444;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    border: 1px solid #333;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
